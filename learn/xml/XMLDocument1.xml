@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"? standalone=”no”>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE organization SYSTEM "organization.dtd">
+<organization> 
+    <departament name = "Culture" > 
+        <employee firstname = "Jame" secondname = "Stet" >
+            <hiredata>29-08-2013</hiredata> 
+            <salary>20000</salary>
+            <jobtitle value = "assistant"></jobtitle>
+        </employee>
+        <employee firstname = "Anton" secondname = "Samon" >
+            <hiredata>30-08-2013</hiredata> 
+            <salary>100000</salary>
+            <jobtitle value = "engineer"> 
+            </jobtitle>
+        </employee>
+    </departament>
+    <departament name = "Sports" > 
+        <employee firstname = "Sam" secondname = "Vin" >
+            <hiredata>28-08-2013</hiredata> 
+            <salary>20000</salary>
+            <jobtitle value = "secretary"> </jobtitle>
+        </employee>
+        <employee firstname = "David" secondname = "Bubbles" >
+            <hiredata>20-08-2013</hiredata> 
+            <salary>30000</salary>
+            <jobtitle value = "manager"></jobtitle>
+        </employee>
+    </departament>
+</organization>
+    
