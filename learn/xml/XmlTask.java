@@ -29,14 +29,20 @@ import org.xml.sax.SAXException;
  * @author Мрр
  */
 public class XmlTask {
-    private String path = "src/po41/Maltseva/wdad/learn/xml/XMLDocument.xml";
+    public XmlTask () throws IOException,ParserConfigurationException, SAXException {
+       generateDocument();
+     
+    }
+    private String path = "D:/starting-monkey-to-human-path/src/po41/Maltseva/wdad/learn/xml/XMLDocument1.xml";
     private Document document;
+    
     private void generateDocument() throws IOException, ParserConfigurationException, SAXException{
         File xmlFile = new File(path); 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         document = builder.parse(xmlFile);
 } 
+    
    private int salaryAverage(NodeList node){
        int count = 0;
        int sumSalary = 0;
