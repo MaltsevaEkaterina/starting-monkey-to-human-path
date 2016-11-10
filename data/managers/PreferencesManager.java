@@ -40,10 +40,8 @@ public class PreferencesManager {
 
     public boolean isCreateRegistry() {
         String tegCreateRegistry = "createregistry";
-        if (document.getElementsByTagName(tegCreateRegistry).item(0).getTextContent().equals("yes"))
-            return true;
-        return false;
-    }
+        return(document.getElementsByTagName(tegCreateRegistry).item(0).getTextContent().equals("yes"));
+                }
     private void writeDoc() throws TransformerException {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
@@ -95,9 +93,7 @@ public class PreferencesManager {
 
     public boolean isUseCodeBaseOnly() {
         String tegUseCodebaseOnly = "usecodebaseonly";
-        if (document.getElementsByTagName(tegUseCodebaseOnly).item(0).getTextContent().equals("yes"))
-            return true;
-        return false;
+        return (document.getElementsByTagName(tegUseCodebaseOnly).item(0).getTextContent().equals("yes"));  
     }
     public void setUseCodeBaseOnly(boolean newUseCodeBaseOnly) throws TransformerException {
         String tegUseCodebaseOnly = "usecodebaseonly";
