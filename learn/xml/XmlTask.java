@@ -62,7 +62,7 @@ public class XmlTask {
         NamedNodeMap map;
         for (int i = 0; i < departments.getLength(); i++){
             map  =  departments.item(i).getAttributes();
-            if (map.getNamedItem("departmen").getNodeValue().equals(departmentName)){
+            if (map.getNamedItem("name").getNodeValue().equals(departmentName)){
                 salary = ((Element)departments.item(i)).getElementsByTagName("salary");
             }
         }
@@ -87,7 +87,7 @@ public class XmlTask {
         StreamResult streamResult = new StreamResult(new File(path));
         transformer.transform(domSource, streamResult);
     }
-    public void setJobTitile(String firstName, String secondName, String newJobTitle) throws TransformerException{
+    public void setJobTitle(String firstName, String secondName, String newJobTitle) throws TransformerException{
         NodeList employee = findEmployee(firstName,secondName).getChildNodes();
         for ( int i = 0; i < employee.getLength(); i++){
             if (employee.item(i).getNodeName().equals("jobtitle")){

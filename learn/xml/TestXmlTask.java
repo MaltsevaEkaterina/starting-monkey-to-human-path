@@ -20,7 +20,7 @@ public class TestXmlTask {
         XmlTask salaryAverage = new XmlTask();
         System.out.println(salaryAverage.salaryAverage());
         System.out.println(salaryAverage.salaryAverage("assistent"));
-        salaryAverage.setJobTitile("Jame", "Stet", "newJobTitle");
+        salaryAverage.setJobTitle("Jame", "Stet", "newJobTitle");
         salaryAverage.setSalary("Anton","Samon",50000);
         salaryAverage.fireEmployee("Sam","Vin");
     }

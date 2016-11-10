@@ -14,7 +14,6 @@
  firstname CDATA #REQUIRED
  secondname CDATA #REQUIRED>
 <!ATTLIST jobtitle value
- (nobody | shit | man | boss)
  (assistant | secretary |
  engineer | manager | head)
  #REQUIRED>
