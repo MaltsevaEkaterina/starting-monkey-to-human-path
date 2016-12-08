@@ -18,11 +18,13 @@ public class TestXmlTask {
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, TransformerException {
         
         XmlTask salaryAverage = new XmlTask();
+        
         System.out.println(salaryAverage.salaryAverage());
-        System.out.println(salaryAverage.salaryAverage("assistent"));
+        System.out.println(salaryAverage.salaryAverage("Culture"));
         salaryAverage.setJobTitle("Jame", "Stet", "newJobTitle");
         salaryAverage.setSalary("Anton","Samon",50000);
         salaryAverage.fireEmployee("Sam","Vin");
+        salaryAverage.transferEmployee("Jame", "Stet", "Sports");
     }
     
 }

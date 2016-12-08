@@ -39,6 +39,7 @@ public class XmlTask {
     private void generateDocument() throws IOException, ParserConfigurationException, SAXException{
         File xmlFile = new File(path); 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setIgnoringElementContentWhitespace(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
         document = builder.parse(xmlFile);
 } 
@@ -62,19 +63,34 @@ public class XmlTask {
         NamedNodeMap map;
         for (int i = 0; i < departments.getLength(); i++){
             map  =  departments.item(i).getAttributes();
-            if (map.getNamedItem("name").getNodeValue().equals(departmentName)){
+            if (map.getNamedItem("name").getTextContent().equals(departmentName)){
                 salary = ((Element)departments.item(i)).getElementsByTagName("salary");
             }
         }
         return salaryAverage(salary);
     }
+    public void transferEmployee(String firstName, String secondName, String departmentName) throws TransformerException{
+            NodeList departments = document.getElementsByTagName("department");
+            NodeList employeers;
+            Node employeer = findEmployee(firstName,secondName);
+            fireEmployee(firstName, secondName);
+          
+            for ( int i = 0; i < departments.getLength(); i++){   
+                if (departments.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(departmentName)){
+                    departments.item(i).appendChild(employeer);
+                }
+            }
+            writeDoc();
+    }
+            
+            
         private Node findEmployee (String firstName, String secondName){
          NodeList employees = document.getElementsByTagName("employee");
          NamedNodeMap map;
          for ( int i = 0; i < employees.getLength(); i++){
              map = employees.item(i).getAttributes();
-             if (map.getNamedItem("firstName").getNodeValue().equals(firstName) &&
-                   map.getNamedItem("secondName").getNodeValue().equals(secondName)  ){
+             if (map.getNamedItem("firstname").getTextContent().equals(firstName) &&
+                   map.getNamedItem("secondname").getTextContent().equals(secondName)  ){
                  return employees.item(i);
              }
          }
@@ -97,6 +113,7 @@ public class XmlTask {
         writeDoc();
         
     }
+   
     public void setSalary(String firstName, String secondName, int newSalary) throws TransformerException{
          NodeList employee = findEmployee(firstName,secondName).getChildNodes();
         for ( int i = 0; i < employee.getLength(); i++){

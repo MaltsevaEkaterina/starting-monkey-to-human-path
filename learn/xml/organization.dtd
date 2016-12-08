@@ -7,7 +7,7 @@
 <!-- hiredate format “DD-MM-YYYY” -->
 <!ELEMENT salary (#PCDATA)>
 <!ELEMENT jobtitle EMPTY>
-<!ATTLIST organization name CDATA>
+<!ATTLIST organization name CDATA #IMPLIED>
 <!ATTLIST department
  name CDATA #REQUIRED>
 <!ATTLIST employee

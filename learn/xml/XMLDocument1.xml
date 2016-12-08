@@ -1,35 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no">
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
--->
-<!DOCTYPE organization SYSTEM "organization.dtd">
-<organization> 
-    <department name = "Culture" > 
-        <employee firstname = "Jame" secondname = "Stet" >
-            <hiredate>29-08-2013</hiredate> 
-            <salary>20000</salary>
-            <jobtitle value = "assistant"></jobtitle>
-        </employee>
-        <employee firstname = "Anton" secondname = "Samon" >
-            <hiredate>30-08-2013</hiredate> 
-            <salary>100000</salary>
-            <jobtitle value = "engineer"> 
-            </jobtitle>
-        </employee>
-    </department>
-    <department name = "Sports" > 
-        <employee firstname = "Sam" secondname = "Vin" >
-            <hiredate>28-08-2013</hiredate> 
-            <salary>20000</salary>
-            <jobtitle value = "secretary"> </jobtitle>
-        </employee>
-        <employee firstname = "David" secondname = "Bubbles" >
-            <hiredate>20-08-2013</hiredate> 
+--><organization><department name="Culture"><employee firstname="Jame" secondname="Stet"><hiredata>29-08-2013</hiredata><salary>20000</salary><jobtitle value="newJobTitle"/></employee><employee firstname="Anton" secondname="Samon"><hiredata>30-08-2013</hiredata><salary>50000</salary><jobtitle value="engineer"> 
+            </jobtitle></employee></department><department name="Sports"><employee firstname="David" secondname="Bubbles"><hiredata>20-08-2013</hiredata><salary>30000</salary><jobtitle value="manager"/></employee>
+             <employee firstname = "David" secondname = "Bubbles" >
+            <hiredata>20-08-2013</hiredata> 
             <salary>30000</salary>
             <jobtitle value = "manager"></jobtitle>
-        </employee>
-    </department>
+        </employee></department>
 </organization>
-    
